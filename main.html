@@ -13,8 +13,18 @@
   }
 </script>
 <style>
+  body {
+    transition-duration: 1s;
+    transition-delay: 1.5s;
+    transition-timing-function: ease-in-out;
+  }
+  body.loaded{
+    background-color: white;
+
+  }
   .center {
     height: 100vh;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,16 +33,28 @@
     transition-delay: 1.5s;
     transition-timing-function: ease-in-out;
   }
-  body.loaded .center {
-    height: 50vh;
+  .name{
+    transition-duration: 1s;
+    transition-delay: 1.5s;
+    transition-timing-function: ease-in-out;
+    position: absolute;
   }
-  .hi, .period {
+  body.loaded .name {
+    width: 30vw;
+    -webkit-text-fill-color: black;
+
+  }
+  body.loaded .center {
+    height: 30vh;
+    width: 30vh;
+  }
+  .hi{
     transition-duration: 1s;
     transition-delay: 1.5s;
     transition-timing-function: ease-in-out;
   }
-  body.loaded .hi,body.loaded .period{
-    opacity: 0;
+  body.loaded .hi{
+    visibility: hidden;
   }
   
 </style>
@@ -49,11 +71,6 @@
           Joe Life
         </h1>
       </td>
-      <td class="period">
-          <h1>
-            .
-          </h1>
-        </td>
       <h1>
         
     </h1>
